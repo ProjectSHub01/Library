@@ -2,6 +2,7 @@
 
 Library = {}
 SaveTheme = {}
+local BackgroundNew = Color3.fromRGB(18, 18, 18)
 local a = {
     index = {"Dark", "MarvenRizX"},
     MarvenRizX = {
@@ -12,29 +13,31 @@ local a = {
         ["Text & Icon"] = Color3.fromRGB(255, 255, 255),
         ["Function"] = {
             ["Toggle"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["True"] = {
                     ["Toggle Background"] = Color3.fromRGB(40, 40, 40),
                     ["Toggle Value"] = Color3.fromRGB(255, 0, 0)
                 },
                 ["False"] = {
-                    ["Toggle Background"] = Color3.fromRGB(30, 30, 30),
+                    ["Toggle Background"] = BackgroundNew,
                     ["Toggle Value"] = Color3.fromRGB(40, 40, 40)
                 }
             },
-            ["Label"] = {["Background"] = Color3.fromRGB(25, 25, 25)},
+            ["Label"] = {
+              ["Background"] = BackgroundNew
+            },
             ["Dropdown"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["Dropdown Select"] = {
-                    ["Background"] = Color3.fromRGB(20, 20, 20),
+                    ["Background"] = Color3.fromRGB(15, 15, 15),
                     ["Search"] = Color3.fromRGB(30, 30, 30),
                     ["Item Background"] = Color3.fromRGB(30, 30, 30)
                 }
             },
             ["Slider"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["Slider Bar"] = Color3.fromRGB(40, 40, 40),
@@ -51,16 +54,16 @@ local a = {
                 ["ScrollingFrame Code"] = Color3.fromRGB(150, 150, 150)
             },
             ["Button"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["Click"] = Color3.fromRGB(230, 230, 230)
             },
             ["Textbox"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230)
             },
             ["Keybind"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["True"] = {
@@ -73,7 +76,7 @@ local a = {
                 }
             },
             ["Color Picker"] = {
-                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Background"] = BackgroundNew,
                 ["Color Select"] = {
                     ["Background"] = Color3.fromRGB(20, 20, 20),
                     ["UIStroke"] = Color3.fromRGB(230, 230, 230)
