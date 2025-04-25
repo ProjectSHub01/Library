@@ -1,19 +1,21 @@
+
+
 Library = {}
 SaveTheme = {}
 local a = {
     index = {"Dark", "MarvenRizX"},
     MarvenRizX = {
-        ["Shadow"] = Color3.fromRGB(15, 15, 15),
-        ["Background"] = Color3.fromRGB(0, 0, 0),
-        ["Page"] = Color3.fromRGB(0, 0, 0),
-        ["Main"] = Color3.fromRGB(50, 50, 50),
-        ["Text & Icon"] = Color3.fromRGB(230, 230, 230),
+        ["Shadow"] = Color3.fromRGB(30, 30, 30),
+        ["Background"] = Color3.fromRGB(10,10,10),
+        ["Page"] = Color3.fromRGB(10,10,10),
+        ["Main"] = Color3.fromRGB(255, 0, 0),
+        ["Text & Icon"] = Color3.fromRGB(255, 255, 255),
         ["Function"] = {
             ["Toggle"] = {
                 ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["True"] = {
                     ["Toggle Background"] = Color3.fromRGB(40, 40, 40),
-                    ["Toggle Value"] = Color3.fromRGB(70, 130, 180)
+                    ["Toggle Value"] = Color3.fromRGB(255, 0, 0)
                 },
                 ["False"] = {
                     ["Toggle Background"] = Color3.fromRGB(30, 30, 30),
@@ -36,7 +38,7 @@ local a = {
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["Slider Bar"] = Color3.fromRGB(40, 40, 40),
-                ["Slider Bar Value"] = Color3.fromRGB(70, 130, 180),
+                ["Slider Bar Value"] = Color3.fromRGB(255, 0, 0),
                 ["Circle Value"] = Color3.fromRGB(255, 255, 255)
             },
             ["Code"] = {
@@ -48,7 +50,10 @@ local a = {
                 ["Background Code Value"] = Color3.fromRGB(28, 28, 28),
                 ["ScrollingFrame Code"] = Color3.fromRGB(150, 150, 150)
             },
-            ["Button"] = {["Background"] = Color3.fromRGB(25, 25, 25), ["Click"] = Color3.fromRGB(230, 230, 230)},
+            ["Button"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Click"] = Color3.fromRGB(230, 230, 230)
+            },
             ["Textbox"] = {
                 ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
