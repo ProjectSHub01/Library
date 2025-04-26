@@ -1,6 +1,6 @@
 Library = {}
 SaveTheme = {}
-local BackgroundNew = Color3.fromRGB(18, 18, 18)
+local BackgroundNew = Color3.fromRGB(20, 20, 20)
 local a = {
     index = {"Dark", "MarvenRizX"},
     MarvenRizX = {
