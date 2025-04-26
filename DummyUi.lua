@@ -1,11 +1,10 @@
-
-
 Library = {}
 SaveTheme = {}
 local BackgroundNew = Color3.fromRGB(18, 18, 18)
 local a = {
     index = {"Dark", "MarvenRizX"},
     MarvenRizX = {
+        ["Stroke"] = ColorSequence.new(Color3.fromRGB(255, 0, 0), Color3.fromRGB(0, 0, 0)),
         ["Shadow"] = Color3.fromRGB(30, 30, 30),
         ["Background"] = Color3.fromRGB(10,10,10),
         ["Page"] = Color3.fromRGB(10,10,10),
@@ -85,6 +84,7 @@ local a = {
         }
     },
     Dark = {
+        ["Stroke"] = ColorSequence.new(Color3.fromRGB(0, 0, 0), Color3.fromRGB(0, 0, 0)),
         ["Shadow"] = Color3.fromRGB(15, 15, 15),
         ["Background"] = Color3.fromRGB(20, 20, 20),
         ["Page"] = Color3.fromRGB(18, 18, 18),
@@ -1063,6 +1063,8 @@ function Library:Window(B)
     local b0, b1 = false, false
     local b2 = B.Theme
     local b3 = B.Theme
+    local _sk = Instance.new("UIStroke")
+    local _gr = Instance.new("UIGradient")
     local b4 = Instance.new("ImageLabel")
     local ae = Instance.new("UIPadding")
     local b5 = Instance.new("CanvasGroup")
@@ -1098,9 +1100,19 @@ function Library:Window(B)
     b5.Size = UDim2.new(1, 0, 1, 0)
     b5.ClipsDescendants = true
     b5.GroupTransparency = 1
+    _sk.Color = Color3.fromRGB(255, 255, 255)
+    _sk.Thickness = 1.5
+    _sk.Parent = b5
+    _gr.Color = a[b3].Stroke
+    _gr.Rotation = 0
+    _gr.Parent = _sk
     b4.Visible = true
     local b7 = b5.Size
     b5.Size = b7 - UDim2.fromOffset(5, 5)
+    game:GetService("RunService").RenderStepped:Connect(function()
+    _gr.Color = a[b3].Stroke
+	_gr.Rotation = _gr.Rotation + 2
+    end)
     tw({v = b5, t = 0.15, s = Enum.EasingStyle.Linear, d = "InOut", g = {GroupTransparency = 0, Size = b7}}):Play()
     addToTheme("Background", b5)
     W.Parent = b5
@@ -4533,3 +4545,4 @@ function Library:Window(B)
     return by
 end
 return Library
+
