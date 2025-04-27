@@ -1,6 +1,8 @@
+
+
 Library = {}
 SaveTheme = {}
-local BackgroundNew = Color3.fromRGB(20, 20, 20)
+local BackgroundNew = Color3.fromRGB(18, 18, 18)
 local a = {
     index = {"Dark", "MarvenRizX"},
     MarvenRizX = {
@@ -1101,7 +1103,7 @@ function Library:Window(B)
     b5.ClipsDescendants = true
     b5.GroupTransparency = 1
     _sk.Color = Color3.fromRGB(255, 255, 255)
-    _sk.Thickness = 1.5
+    _sk.Thickness = 1
     _sk.Parent = b5
     _gr.Color = a[b3].Stroke
     _gr.Rotation = 0
@@ -1110,7 +1112,6 @@ function Library:Window(B)
     local b7 = b5.Size
     b5.Size = b7 - UDim2.fromOffset(5, 5)
     game:GetService("RunService").RenderStepped:Connect(function()
-    _gr.Color = a[b3].Stroke
 	_gr.Rotation = _gr.Rotation + 2
     end)
     tw({v = b5, t = 0.15, s = Enum.EasingStyle.Linear, d = "InOut", g = {GroupTransparency = 0, Size = b7}}):Play()
@@ -1244,7 +1245,7 @@ function Library:Window(B)
     a2.BackgroundTransparency = 1
     a2.BorderColor3 = Color3.fromRGB(0, 0, 0)
     a2.BorderSizePixel = 0
-    a2.Size = UDim2.new(0, 30, 0, 30)
+    a2.Size = UDim2.new(0, 40, 0, 40)
     a2.Image = gl(aX).Image
     a2.ImageRectSize = gl(aX).ImageRectSize
     a2.ImageRectOffset = gl(aX).ImageRectPosition
@@ -4545,4 +4546,3 @@ function Library:Window(B)
     return by
 end
 return Library
-
