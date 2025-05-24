@@ -4,7 +4,7 @@ Library = {}
 SaveTheme = {}
 local BackgroundNew = Color3.fromRGB(18, 18, 18)
 local a = {
-    index = {"Dark", "MarvenRizX"},
+    index = {"Dark", "MarvenRizX", "NewGen"},
     MarvenRizX = {
         ["Stroke"] = ColorSequence.new(Color3.fromRGB(255, 0, 0), Color3.fromRGB(0, 0, 0)),
         ["Shadow"] = Color3.fromRGB(30, 30, 30),
@@ -86,6 +86,81 @@ local a = {
         }
     },
     Dark = {
+        ["Stroke"] = ColorSequence.new(Color3.fromRGB(0, 0, 0), Color3.fromRGB(0, 0, 0)),
+        ["Shadow"] = Color3.fromRGB(15, 15, 15),
+        ["Background"] = Color3.fromRGB(20, 20, 20),
+        ["Page"] = Color3.fromRGB(18, 18, 18),
+        ["Main"] = Color3.fromRGB(50, 50, 50),
+        ["Text & Icon"] = Color3.fromRGB(230, 230, 230),
+        ["Function"] = {
+            ["Toggle"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["True"] = {
+                    ["Toggle Background"] = Color3.fromRGB(40, 40, 40),
+                    ["Toggle Value"] = Color3.fromRGB(70, 130, 180)
+                },
+                ["False"] = {
+                    ["Toggle Background"] = Color3.fromRGB(30, 30, 30),
+                    ["Toggle Value"] = Color3.fromRGB(40, 40, 40)
+                }
+            },
+            ["Label"] = {["Background"] = Color3.fromRGB(25, 25, 25)},
+            ["Dropdown"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Value Background"] = Color3.fromRGB(20, 20, 20),
+                ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
+                ["Dropdown Select"] = {
+                    ["Background"] = Color3.fromRGB(20, 20, 20),
+                    ["Search"] = Color3.fromRGB(30, 30, 30),
+                    ["Item Background"] = Color3.fromRGB(30, 30, 30)
+                }
+            },
+            ["Slider"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Value Background"] = Color3.fromRGB(20, 20, 20),
+                ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
+                ["Slider Bar"] = Color3.fromRGB(40, 40, 40),
+                ["Slider Bar Value"] = Color3.fromRGB(70, 130, 180),
+                ["Circle Value"] = Color3.fromRGB(255, 255, 255)
+            },
+            ["Code"] = {
+                ["Background"] = ColorSequence.new {
+                    ColorSequenceKeypoint.new(0, Color3.fromRGB(25, 25, 25)),
+                    ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25))
+                },
+                ["Background Code"] = Color3.fromRGB(35, 35, 35),
+                ["Background Code Value"] = Color3.fromRGB(28, 28, 28),
+                ["ScrollingFrame Code"] = Color3.fromRGB(150, 150, 150)
+            },
+            ["Button"] = {["Background"] = Color3.fromRGB(25, 25, 25), ["Click"] = Color3.fromRGB(230, 230, 230)},
+            ["Textbox"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Value Background"] = Color3.fromRGB(20, 20, 20),
+                ["Value Stroke"] = Color3.fromRGB(230, 230, 230)
+            },
+            ["Keybind"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Value Background"] = Color3.fromRGB(20, 20, 20),
+                ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
+                ["True"] = {
+                    ["Toggle Background"] = Color3.fromRGB(40, 40, 40),
+                    ["Toggle Value"] = Color3.fromRGB(70, 130, 180)
+                },
+                ["False"] = {
+                    ["Toggle Background"] = Color3.fromRGB(30, 30, 30),
+                    ["Toggle Value"] = Color3.fromRGB(40, 40, 40)
+                }
+            },
+            ["Color Picker"] = {
+                ["Background"] = Color3.fromRGB(25, 25, 25),
+                ["Color Select"] = {
+                    ["Background"] = Color3.fromRGB(20, 20, 20),
+                    ["UIStroke"] = Color3.fromRGB(230, 230, 230)
+                }
+            }
+        }
+    },
+    NewGen = {
         ["Stroke"] = ColorSequence.new(Color3.fromRGB(0, 0, 0), Color3.fromRGB(0, 0, 0)),
         ["Shadow"] = Color3.fromRGB(15, 15, 15),
         ["Background"] = Color3.fromRGB(20, 20, 20),
@@ -1113,6 +1188,7 @@ function Library:Window(B)
     b5.Size = b7 - UDim2.fromOffset(5, 5)
     game:GetService("RunService").RenderStepped:Connect(function()
 	_gr.Rotation = _gr.Rotation + 2
+	_gr.Color = a[b3].Stroke
     end)
     tw({v = b5, t = 0.15, s = Enum.EasingStyle.Linear, d = "InOut", g = {GroupTransparency = 0, Size = b7}}):Play()
     addToTheme("Background", b5)
