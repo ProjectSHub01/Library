@@ -160,7 +160,7 @@ local a = {
             }
         }
     },
-    NewGen = {
+    MarvenRiz = {
         ["Stroke"] = ColorSequence.new(Color3.fromRGB(0, 0, 0), Color3.fromRGB(0, 0, 0)),
         ["Shadow"] = Color3.fromRGB(15, 15, 15),
         ["Background"] = Color3.fromRGB(20, 20, 20),
@@ -169,21 +169,21 @@ local a = {
         ["Text & Icon"] = Color3.fromRGB(230, 230, 230),
         ["Function"] = {
             ["Toggle"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["True"] = {
                     ["Toggle Background"] = Color3.fromRGB(40, 40, 40),
                     ["Toggle Value"] = Color3.fromRGB(255, 0, 0)
                 },
                 ["False"] = {
-                    ["Toggle Background"] = BackgroundNew,
+                    ["Toggle Background"] = Color3.fromRGB(25, 25, 25),
                     ["Toggle Value"] = Color3.fromRGB(40, 40, 40)
                 }
             },
             ["Label"] = {
-              ["Background"] = BackgroundNew
+              ["Background"] = Color3.fromRGB(25, 25, 25)
             },
             ["Dropdown"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["Dropdown Select"] = {
@@ -193,7 +193,7 @@ local a = {
                 }
             },
             ["Slider"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["Slider Bar"] = Color3.fromRGB(40, 40, 40),
@@ -210,16 +210,16 @@ local a = {
                 ["ScrollingFrame Code"] = Color3.fromRGB(150, 150, 150)
             },
             ["Button"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Click"] = Color3.fromRGB(230, 230, 230)
             },
             ["Textbox"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230)
             },
             ["Keybind"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Value Background"] = Color3.fromRGB(20, 20, 20),
                 ["Value Stroke"] = Color3.fromRGB(230, 230, 230),
                 ["True"] = {
@@ -232,14 +232,14 @@ local a = {
                 }
             },
             ["Color Picker"] = {
-                ["Background"] = BackgroundNew,
+                ["Background"] = Color3.fromRGB(25, 25, 25),
                 ["Color Select"] = {
                     ["Background"] = Color3.fromRGB(20, 20, 20),
                     ["UIStroke"] = Color3.fromRGB(230, 230, 230)
                 }
             }
         }
-    }
+    },
 }
 local b = Instance.new("ScreenGui")
 b.Parent =
